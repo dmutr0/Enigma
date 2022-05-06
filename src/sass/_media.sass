@@ -1,0 +1,100 @@
+@media (max-width: 1140px) 
+    .promo
+        &__title
+            font-size: 44px
+
+            &::before, &::after
+                display: none
+        &__text
+            font-size: 23px
+
+    .history
+        &__header
+            font-size: 22px
+
+        &__text
+            font-size: 18px
+
+    .level_system
+        &__block:nth-child(2)
+            margin-top: 20px
+
+            .level_system__level
+                &:nth-child(1) .level_system__level__round
+                    background-color: $first-color
+                &:nth-child(2) .level_system__level__round
+                    background-color: $second-color
+                    
+        
+        &__level
+            width: 50%
+
+            &__descr
+                font-size: 18px
+
+@media (max-width: 768px) 
+    .menu
+        &__links
+            font-size: 15px
+    .history
+        &__header, &__text
+            margin: 0 auto
+            text-align: center
+        &__text
+            margin-top: 20px
+            font-size: 20px
+
+        &__bg
+            width: 70%
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+@media (max-width: 540px)
+    .menu
+        display: none
+    
+    .promo
+        padding-top: 44px
+        &__subtitle
+            font-size: 33px
+        &__text
+            font-size: 20px
+
+    .history
+        &__bg
+            width: 90%
+        &__header
+            font-size: 20px
+        &__text
+            font-size: 16px
+
+    .level_system
+        &__header
+            font-size: 24px
+        &__wrapper
+            margin-top: 15px
+        &__block
+            &:nth-child(2)
+                .level_system__level
+                    &:nth-child(1) .level_system__level__round
+                        background-color: $second-color
+                    &:nth-child(2) .level_system__level__round
+                        background-color: $first-color
+
+            flex-direction: column
+            align-items: center
+        &__level
+            width: 100%
+            margin-top: 15px
+            
+
+            &__header
+                font-size: 18px
+
+    .footer
+        &__creators
+            font-size: 16px
+        
+        &__link
+            font-size: 14px
