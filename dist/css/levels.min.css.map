@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../../img/levels/levels.sass"
-    ],
-    "names": [],
-    "file": "levels.min.css"
-}
