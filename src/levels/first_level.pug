@@ -1,0 +1,52 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../css/levels-style.min.css")
+        title Enigma
+    body 
+        - let level = "Перший рівень"
+        - let levelDescr = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat ea et ex dolorum molestiae assumenda obcaecati totam ratione accusantium hic vero similique, modi provident nobis nihil laborum tempora sint aspernatur."
+
+        include includes/menu.pug
+        include includes/promo.pug
+
+        section.items
+            - 
+                let items = [
+                    {
+                            header: "ABC",
+                            descr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aut, dolore reiciendis praesentium molestiae culpa molestias, corporis, blanditiis voluptatum enim facere vel. Aperiam cumque ipsum magnam qui mollitia quod laudantium!",
+                            firstImg: "../img/first_level/huzzle_abc.jpg",
+                            secondImg: "../img/first_level/huzzle_abc.jpg",
+                            price: 389,
+                    },
+                    {
+                            header: "Diamond",
+                            descr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat excepturi quidem architecto! Aspernatur dolorem dicta expedita doloribus voluptatibus, similique fuga eaque qui odit? Aperiam ad officia, veniam earum fugit sed.",
+                            firstImg: "../img/first_level/huzzle_diamond.jpg",
+                            secondImg: "../img/first_level/huzzle_diamond.jpg",
+                            price: 395,
+                            discount: 359
+                    },
+                    {
+                            header: "Flag",
+                            descr: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, sit blanditiis aspernatur eligendi iusto cumque, aliquid quisquam cum beatae animi neque modi eaque suscipit asperiores nam facere ipsum a doloribus.",
+                            firstImg: "../img/first_level/huzzle_flag.jpg",
+                            secondImg: "../img/first_level/huzzle_flag.jpg",
+                            price: 389,
+                    },
+                    {
+                            header: "Solve the Cubes",
+                            descr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum labore corporis eveniet ipsum quidem debitis ab veritatis, voluptatibus et voluptatem libero dolorum blanditiis ut, assumenda velit, provident accusantium natus suscipit!",
+                            firstImg: "../img/first_level/solve_the_cube.jpg",
+                            secondImg: "../img/first_level/solve_the_cube.jpg",
+                            price: 359
+                    }
+                ]
+            each item in items
+                include includes/item.pug
+
+        include includes/footer.pug

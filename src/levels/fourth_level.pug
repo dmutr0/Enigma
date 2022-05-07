@@ -1,0 +1,54 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../css/levels-style.min.css")
+        title Enigma
+    body 
+        - let level = "Четвертий рівень"
+        - let levelDescr = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis dignissimos repudiandae, expedita sint quidem reprehenderit totam! Earum fuga corporis eaque. Ipsum, dolorem placeat alias exercitationem rerum atque voluptate quas corrupti!"
+
+        include includes/menu.pug
+        include includes/promo.pug
+
+        section.items
+            - 
+                let items = [
+                    {
+                            header: "Cake",
+                            descr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aut, dolore reiciendis praesentium molestiae culpa molestias, corporis, blanditiis voluptatum enim facere vel. Aperiam cumque ipsum magnam qui mollitia quod laudantium!",
+                            firstImg: "../img/fourth_level/huzzle_cake.jpg",
+                            secondImg: "../img/fourth_level/huzzle_cake.jpg",
+                            price: 679
+                    },
+                    {
+                            header: "Heart",
+                            descr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat excepturi quidem architecto! Aspernatur dolorem dicta expedita doloribus voluptatibus, similique fuga eaque qui odit? Aperiam ad officia, veniam earum fugit sed.",
+                            firstImg: "../img/fourth_level/huzzle_heart.jpg",
+                            secondImg: "../img/fourth_level/huzzle_heart.jpg",
+                            price: 709,
+                            discount: 669
+                    },
+                    {
+                            header: "Loeuf",
+                            descr: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, sit blanditiis aspernatur eligendi iusto cumque, aliquid quisquam cum beatae animi neque modi eaque suscipit asperiores nam facere ipsum a doloribus.",
+                            firstImg: "../img/fourth_level/huzzle_loeuf.jpg",
+                            secondImg: "../img/fourth_level/huzzle_loeuf.jpg",
+                            price: 659
+                    },
+                    {
+                            header: "Twist",
+                            descr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum labore corporis eveniet ipsum quidem debitis ab veritatis, voluptatibus et voluptatem libero dolorum blanditiis ut, assumenda velit, provident accusantium natus suscipit!",
+                            firstImg: "../img/fourth_level/huzzle_twist.jpg",
+                            secondImg: "../img/fourth_level/huzzle_twist.jpg",
+                            price: 699,
+                            discount: 669
+                    }
+                ]
+            each item in items
+                include includes/item.pug
+
+        include includes/footer.pug
+        

@@ -1,0 +1,11 @@
+.item
+    .container
+            img.first_img(src= item.firstImg, alt="first")
+            .about
+                h2.about__header= item.header
+                .divider
+                .about__descr= item.descr
+                .buy
+                    .price!= !item.discount ? item.price + " UAH" : `<span class="old_price">${item.price} UAH</span><span class="new_price">${item.discount} UAH</span>`
+                    button.buy_btn Купити
+            img.second_img(src= item.secondImg, alt="second")

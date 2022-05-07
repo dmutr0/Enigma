@@ -1,0 +1,52 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../css/levels-style.min.css")
+        title Enigma
+    body 
+        - let level = "Третій рівень"
+        - let levelDescr = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, sit eos nesciunt quibusdam unde et necessitatibus nemo repellat expedita iste cum tenetur maiores porro, nihil voluptate ipsa facilis ipsam fuga!"
+
+        include includes/menu.pug
+        include includes/promo.pug
+
+        section.items
+            - 
+                let items = [
+                    {
+                            header: "Arrows",
+                            descr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aut, dolore reiciendis praesentium molestiae culpa molestias, corporis, blanditiis voluptatum enim facere vel. Aperiam cumque ipsum magnam qui mollitia quod laudantium!",
+                            firstImg: "../img/third_level/huzzle_arrows.jpg",
+                            secondImg: "../img/third_level/huzzle_arrows.jpg",
+                            price: 539,
+                            discount: 499
+                    },
+                    {
+                            header: "Cage",
+                            descr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat excepturi quidem architecto! Aspernatur dolorem dicta expedita doloribus voluptatibus, similique fuga eaque qui odit? Aperiam ad officia, veniam earum fugit sed.",
+                            firstImg: "../img/third_level/huzzle_cage.jpg",
+                            secondImg: "../img/third_level/huzzle_cage.jpg",
+                            price: 499
+                    },
+                    {
+                            header: "Dice",
+                            descr: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, sit blanditiis aspernatur eligendi iusto cumque, aliquid quisquam cum beatae animi neque modi eaque suscipit asperiores nam facere ipsum a doloribus.",
+                            firstImg: "../img/third_level/huzzle_dice.jpg",
+                            secondImg: "../img/third_level/huzzle_dice.jpg",
+                            price: 529
+                    },
+                    {
+                            header: "Dolce",
+                            descr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum labore corporis eveniet ipsum quidem debitis ab veritatis, voluptatibus et voluptatem libero dolorum blanditiis ut, assumenda velit, provident accusantium natus suscipit!",
+                            firstImg: "../img/third_level/huzzle_dolce.jpg",
+                            secondImg: "../img/third_level/huzzle_dolce.jpg",
+                            price: 559
+                    }
+                ]
+            each item in items
+                include includes/item.pug
+
+        include includes/footer.pug

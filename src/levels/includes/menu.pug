@@ -1,0 +1,17 @@
+-
+    let levels = [
+        {label: "Перший рівень", src: level === "Перший рівень" ? "" : "first_level.min.html"},
+        {label: "Другий рівень", src: level === "Другий рівень" ? "" : "second_level.min.html"},
+        {label: "Третій рівень", src: level === "Третій рівень" ? "" : "third_level.min.html"},
+        {label: "Четвертий рівень", src: level === "Четвертий рівень" ? "" : "fourth_level.min.html"}
+    ]
+nav.menu
+            .container 
+                ul.menu__links 
+                    li.menu__link
+                        a(href="../index.html") 
+                            img(src="../icons/logo.png", alt="logo")
+                    each level in levels 
+                        li.menu__link
+                            a(href=`${level.src}`)= level.label
+                        
